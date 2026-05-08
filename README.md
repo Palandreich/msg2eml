@@ -61,18 +61,3 @@ A system notification will appear when conversion is complete.
 > If the Quick Action does not appear, restart Finder:  
 > Option + right-click the Finder icon in the Dock → **Relaunch**
 
-**3. (Optional) Show the menu item only for .msg files:**
-
-By default the Quick Action appears for all files. To restrict it to `.msg` only, register a custom UTI:
-
-```bash
-./register_uti.sh "Convert to EML"   # pass your Quick Action name
-```
-
-This creates a minimal helper app at `~/.msg2eml-helper/` and registers a `.msg` UTI with macOS Launch Services. The helper must stay in place — moving or deleting it will unregister the UTI.
-
-To undo:
-
-```bash
-./unregister_uti.sh "Convert to EML"
-```
